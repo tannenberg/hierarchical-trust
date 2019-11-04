@@ -1,0 +1,9 @@
+{
+    "path" : "~/hierarchical-trust",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

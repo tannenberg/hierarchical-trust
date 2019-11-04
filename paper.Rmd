@@ -1,0 +1,70 @@
+---
+title: 'Hierarchical Trust'
+subtitle: "Upside down you're turning me"
+author: "Mattias Agerberg and Marcus Tannenberg"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: pdf_document
+includes:
+indent: true
+bibliography: references.bib
+header-includes:
+    - \usepackage{setspace}
+    - \usepackage{bbm}
+    - \doublespacing
+    - \usepackage[utf8]{inputenc}
+    - \usepackage{CJKutf8} 
+---
+
+# Abstract
+
+
+
+\newpage
+
+# Introduction
+
+This paper address two issues of substantive importance within the study of political support in authoritarian regimes: namely the existence of hierarchical trust in China as well as sub-groups' sensitivity bias to political survey items. We use *sensitivity bias* and *self-censorship* interchangeably.
+
+The first issue pertains to the longstanding observation that Chinese respondents exhibit more trust in the national government than in the local government^[In the most recent round of the Asian Barometer just shy of 87 percent of respondents reported "A great deal" or "Quite a lot" of trust in the national government, while only 64 percent did so for the Local government.] (see @li1996villagers; @bernstein2003taxation). This is opposite to what we observe in most western and all other Asian countries for which there is survey data [@wu2018local]. This anomalous pattern has been subject to much scholarly attention and, for example, been explained by the differential impact on trust in the local and national government stemming from: implementation of education reform [@lu2014social]; land requisitions [@cui2015land]; state media consumption [@li2004political]; and Confucian values [@wong2011bases]. An alternative explanation is that this anomaly is driven by over-reporting of trust in the central government. @wu2018local find that holding hierarchical trust is associated with reported political fear.^[The authors use responses to "people are free to speak what they think without fear", and "people can join any organization they like without fear" to measure political fear. It should be noted that these too are sensitive items which may suffer from underreporting.]. The practice of state run media to scapegoat local governments and officials to improve perceptions of the government in Beijing may not only shape perceptions [@li2004political], but can also signal that distrust of your local government is a sanctioned opinion to hold. Expressing distrust of the central government, however, may not be sanctioned. Indicative of the latter, @li2016reassessing provides indirect evidence that trust in the central government is weaker than suggested by surveys, and in a previous study we show direct evidence of substantive self-censorship (underreporting) with regards to "Confidence in the national government" [@robinson2019self]. It is possible that this highly scrutinized pattern of hierarchical trust does, in fact, not exist. In this study we compare the prevalence of trust in the national government and the local government obtained through indirect estimates (from list experiment C and D). To get at potential differences in perceived sensitivity of the two items we compare the list estimates to the estimated prevalence of trust in the two levels when asked directly. The order in which list C and D is presented to the respondent is randomized. We also randomize the order of the direct questions corresponding to the sensitive items on list C, and D. 
+
+The second purpose of this study is to investigate if there are differences in the propensity to self-censor among a number of sub-groups. First, we have expectations with regards to two sets of sub-groups: gender and age. In previous work we have documented that women are more effected by sensitivity bias than are men: women report higher regime support, and lower experienced corruption when asked directly, but when asked indirectly women instead report *lower* levels of regime support and *higher* levels of experienced corruption than men (see @robinson2019self and @agerberg2019corrupted). The systematic variation in self-censorship is large enough to fully reverse the observed relationship between gender and the sensitive items as estimated through direct questioning. We observe the same pattern with regards to younger (below 30) and older (30 or above) respondents: with younger respondents reporting higher levels of regime support when asked directly than do older respondents, while exhibiting lower levels of support when estimated with list experiments. In addition we expect respondents with urban hukou (household registration) to be more effected by sensitivity bias than rural respondents due to the design of the Chinese social system with urban hukou holder having access to more services. Again we observe this pattern in our previous study. Second, we will conduct an explorative analysis of subgroup differences based on binary measures of income (High/Low); and education (University/No university); party membership (Yes/No). While our previous studies have been relatively underpowered to establish differences of misreporting among subgroups (as have most previous applications of list experiments [@blair2018worry]), we are aiming for a sample size of 4000 to 5000 respondents in this study which will allow us to detect the existence of any substantial differences.        
+
+
+
+
+## Research design
+
+The study is based on two list experiments, A, B, the two sensitive items: A) "I have trust in the national government in Beijing"; and B) "I have trust in the local government". List C, D will have same set up as list B, with one third of the sample receiving the control list, one third the control list plus a placebo, and one third the treatment list. 
+
+
+
+## Analysis
+
+We will use the IMC described above to exclude inattentive respondents from all analyses. In order to evaluate the extent of self-censorship we ask for agreement with the three sensitive items directly. The direct questions will be given to the full sample in order to get as precise estimates as possible. They will be placed *after* the last list experiment in order to avoid priming effects on the list experiment. This survey flow does however carry the risk that asking a treated individual the direct question post-treatment could produce priming effects. This can be tested; if presentation of the treatment list primes one to respond in a certain manner to the direct question, or to opt for a "Do not know" response, treatment status should correlate with outcome of the direct question. To test this we regress a $y_{agree}$ that equals 1 for respondents who "agree" with the sensitive item in direct questioning and 0 otherwise on an indicator variable $T$ that equals 1 for respondents assigned to the treatment list and 0 otherwise. We use logistic regression to estimate the equation and compute a LR-test to see if the inclusion of $T$ is an improvement over the null-model. A rejection of the null-hypothesis in the LR-test would be evidence that the direct estimates of the sensitive item are not equal for the treatment and control group in the list experiment. We do the same for for $y_{DK}$ for which 1 equals "Do not know" and 0 any response to the direct item. In the event of priming effects we will simply exclude respondents who received the corresponding treatment list when estimating $\hat{\tau}_{direct}$. If we detect no priming we retain the full sample for the direct estimates.
+
+First, we will test the extent of self-censorship for the three sensitive items: (C) "I have trust in the national government in Beijing"; (D) "I have trust in the local government"; and (E) "I have witnessed an act of corruption or bribe-taking by a government official in the past year". We compare this estimate with that obtained from the direct questioning method ($\hat{\tau}_{direct}$). We code respondents answering "do not know" as 0 (*no trust* for C, D, and *not having witnessed corruption* for E). We use the procedure described in @blair2012statistical and compare the predicted responses to the direct questions, modeled with a logistic regression model, to the predicted responses to the sensitive item in the different list experiments respectively. The procedure gives us an estimate of the amount of sensitivity bias (the difference between the direct and indirect question), including 95\% confidence intervals around the estimates (obtained via Monte Carlo simulations; see @blair2012statistical). We consider a sensitivity bias estimate that is statistically different from 0 as evidence of self-censorship.
+
+Second, we use the estimates of self-censorship to compare the degree of misreporting bias between the items of trust in the national and the local government. We expect misreporting bias to be larger at the national level. To compare overall levels of misreporting bias we first use the procedure described above to obtain estimates for the direct and indirect questions for national and local government respectively. This gives us an estimate of sensitivity bias for each level of government, allowing us to calculate the difference between the two estimates. We use a bootstrap procedure to compute a one-sided confidence interval for the estimated difference: we resample indices in the data set with replacement and repeat the procedure above a large number of times ($>1000$). We use the estimated sampling variance of the difference to calculate a one-sided 95\% non-parametric bootstrap confidence interval for the estimate. We reject the null hypothesis of no difference if the calculated interval excludes 0. Based on simulations we estimate that the true difference in reporting bias has to be around 8 percentage points for the procedure to have 80\% power to reject the null hypothesis (given 4000 respondents).
+
+Third, we will test for differences in sensitivity bias among subgroups by calculating multiple regression estimates of the list items with included covariates, using the *List* package in R [see @blair2012statistical]. For list experiment C and D (which do not include a placebo item in the control group) we use the Nonlinear Least Squares (NLS) estimator to estimate agreement with the sensitive items when asked indirectly ($\hat{\tau}_{list}$) (see @imai2011multivariate), conditional on respondent characteristics. By including the same covariates when modeling the direct question we can estimate the predicted amount of self-censorship (or "social desirability bias") as a function of different respondent characteristics. We do the same for list experiment E but instead use the standard linear estimator [@imai2011multivariate]. The reason for using the linear estimator instead of the NLS estimator is the inclusion of a placebo item in one of the control groups for list E. This procedure lets us explore which respondent characteristics that are relevant in determining self-censorship. Note that for reasons of statistical power we will only explore this *within* each specific list experiment and not make subgroup comparisons across the different experiments.
+
+
+# Examining sub-group differences to self-censor
+
+\newpage
+
+
+
+# References
+\noindent
+\setlength{\parindent}{-0.2in}
+\setlength{\leftskip}{0.2in}
+
+<div id="refs"></div>
+
+\newpage
+
+\setlength{\parindent}{0.2in}
+\setlength{\leftskip}{0in}
+
+## Appendix
