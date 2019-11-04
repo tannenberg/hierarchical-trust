@@ -11,3 +11,7 @@ survey-data.csv
 #lets just add things as we learn...
 
 *.Rhistory
+
+*.DS_Store
+
+*.Rproj.user/
